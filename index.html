@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Driven Eats</title>
+</head>
+<body>
+    
+        <div class="topo">
+            <h1>DrivenEats</h1>
+            <h2>Sua comida em 6 minutos</h2>
+        </div>
+        <div class="conteudo">
+            <div class="pratos principal">
+                <h1>Primeiro, seu prato</h1>
+                <div class = "opcoesPrato">
+                    <div onclick="selecionarPrato(this)" >
+                        <img src="imagens/cana.jpg" alt="">
+                            <h1>Cana frita</h1>
+                            <h2>Cana deliciosa muito totosa</h2>
+                            <h3>RS<strong>14,90</strong></h3>
+                            <img class="seloOk escondido" src="imagens/verde.png" alt="">
+                    </div>
+                    <div onclick="selecionarPrato(this)" >
+                        <img src="imagens/cana.jpg" alt="">
+                        <h1>Cana assada</h1>
+                        <h2>Cana deliciosa muito totosa</h2>
+                        <h3>RS<strong>14,90</strong></h3>
+                        <img class="seloOk escondido" src="imagens/verde.png" alt="">
+                    </div>
+                    <div onclick="selecionarPrato(this)">
+                        <img src="imagens/cana.jpg" alt="">
+                        <h1>Cana cozida</h1>
+                        <h2>Cana deliciosa muito totosa</h2>
+                        <h3>RS<strong>14,90</strong></h3>
+                        <img class="seloOk escondido" src="imagens/verde.png" alt="">
+                    </div>        
+                </div>
+            </div>
+            <div class="pratos bebidas">
+                <h1>Agora, sua bebida</h1>
+                <div class = "opcoesPrato">
+                    <div onclick="selecionarBebida(this)">
+                        <img src="imagens/cana.jpg" alt="">
+                        <h1>Cana limonada</h1>
+                        <h2>Cana deliciosa muito totosa</h2>
+                        <h3>RS<strong>14,90</strong></h3>
+                    </div>
+                    <div onclick="selecionarBebida(this)">
+                        <img src="imagens/cana.jpg" alt="">
+                        <h1>Cana agua</h1>
+                        <h2>Cana deliciosa muito totosa</h2>
+                        <h3>RS<strong>14,90</strong></h3>
+                    </div>
+                    <div onclick="selecionarBebida(this)">
+                        <img src="imagens/cana.jpg" alt="">
+                        <h1>Cana cerveja</h1>
+                        <h2>Cana deliciosa muito totosa</h2>
+                        <h3>RS<strong>14,90</strong></h3>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="pratos sobremesa">
+                <h1>Por fim, sua sobremesa</h1>
+                <div class = "opcoesPrato">
+                    <div onclick="selecionarSobremesa(this)">
+                        <img src="imagens/cana.jpg" alt="">
+                        <h1>Mousse de Cana</h1>
+                        <h2>Cana deliciosa muito totosa</h2>
+                        <h3>RS<strong>14,90</strong></h3>
+                    </div>
+                    <div onclick="selecionarSobremesa(this)">
+                        <img src="imagens/cana.jpg" alt="">
+                        <h1>Pudim de Cana</h1>
+                        <h2>Cana deliciosa muito totosa</h2>
+                        <h3>RS<strong>14,90</strong></h3>
+                    </div>
+                    <div onclick="selecionarSobremesa(this)">
+                        <img src="imagens/cana.jpg" alt="">
+                        <h1>Bolo de Cana</h1>
+                        <h2>Cana deliciosa muito totosa</h2>
+                        <h3>RS<strong>14,90</strong></h3>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="finalizar">
+            <button class="botaoCinza" onclick="mostrarPedido()">Selecione os 3 itens</br>
+                para fechar o pedido</button>
+        </div>
+        <div class="pedidos escondido" >
+            <div >
+                <h1>Confirme seu pedido</h1>
+                <div class="confirmacaoPedido">
+                    <div>
+                        <ul>
+                            <li class="nomePrato">nomePrato</li>
+                            <li class="nomeBebida">nomeBebida</li>
+                            <li class="nomeSobremesa">nomeSobremesa</li>
+                            <li>TOTAL</li>
+
+                        </ul>
+                        <ul>
+                            <li class="precoPrato">nomePrato</li>
+                            <li class="precoBebida">nomeBebida</li>
+                            <li class="precoSobremesa">nomeSobremesa</li>
+                            <li class="Total">ValorTotal</li>
+                        </ul>
+                    </div>
+                    <div class="pedir">Tudo certo, pode pedir!</div>
+                    <div class="cancelar">Cancelar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

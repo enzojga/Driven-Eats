@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    font-family: Righteous;
+    background-color: #E5E5E5;
+    margin: 0 auto;
+    width: 414px;
+}
+.pedidos{
+    width: 414px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top:0;
+    z-index: 99;
+    font-family: Roboto;
+    display: flex;
+    align-items: center;
+}
+.pedidos h1{
+    text-align:center;
+    font-size: 22px;
+    color: white;
+    font-weight: 700;
+    margin-top: 21px;
+}
+.pedidos > div{
+    background-color:#50D074;
+    width: 377px;
+    height: 353px;
+    margin: 0 auto;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+}
+.confirmacaoPedido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pedir{
+    width: 329px;
+    height: 52px;
+    background-color: black;
+    background-color: white;
+    border-radius: 100px;    
+    color: #50D074;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.confirmacaoPedido > :nth-child(1){
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 26px;
+    margin-right: 26px;
+}
+.confirmacaoPedido ul{
+    margin-top: 15px;
+}
+.confirmacaoPedido ul :nth-child(4){
+    font-weight: 700;
+}
+.confirmacaoPedido li{
+    color:white;
+    font-size: 22px;
+    margin-top: 13px;
+}
+.confirmacaoPedido > :nth-child(3){
+    color: white;
+    width: 333px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.topo{
+    width: 414px;
+    height: 92px;
+    background-color: #CF2B2B;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    left: 1;
+}
+.topo > h1{
+    font-size: 44px;
+    margin-left: 21px;
+}
+.topo > h2{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 21px;
+}
+.conteudo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 61px;
+}
+.conteudo >  :nth-child(1){
+    margin-top: 117px;
+}
+.pratos{
+    margin-top: 27px;
+    width: 100%;
+}
+.pratos > h1{
+    margin-bottom: 17px;
+    font-size: 26PX;
+}
+
+.opcoesPrato{
+    display: flex;
+    overflow-x: scroll
+}
+.opcoesPrato > div{
+    min-width: 172px;
+    max-width: 172px;
+    height: 216px;
+    font-family: Roboto;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    margin-left: 20px;
+    position: relative;
+    box-sizing:content-box;
+}
+
+.opcoesPrato div :nth-child(n){
+    margin-left: 14px;
+    margin-top: 9px;
+}
+.opcoesPrato div :nth-child(1){
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+    margin-top: 18px;
+}
+.opcoesPrato div :nth-child(2){
+    font-weight: 700;
+}
+.opcoesPrato div :nth-child(3){
+    color: #A6A6A6;
+    font-weight: 300;
+    font-size: 15px;
+}
+.opcoesPrato div :nth-child(4){
+    font-weight: 400;
+}
+.opcoesPrato div h3 strong{
+    margin-left: -10px;
+}
+.finalizar{
+    width: 414px;
+    height: 92px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 1;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.botaoCinza{
+    width: 364px;
+    height: 61px;
+    border: 6px solid #CBCBCB;
+    border-radius: 50px;
+    background-color: #CBCBCB;
+    font-size: 20px;
+    color:white
+}
+.botaoVerde{
+    width: 364px;
+    height: 61px;
+    border: 6px solid #32B72F;
+    border-radius: 50px;
+    background-color: #32B72F;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+span{
+    display: flex;
+}
+.seloOk{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.escolhido{
+    border: 6px solid #32B72F;
+    box-sizing: border-box;
+}
+.escondido{
+    display: none;
+}
