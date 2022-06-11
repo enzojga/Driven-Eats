@@ -7,6 +7,10 @@ body {
     margin: 0 auto;
     width: 414px;
 }
+a {
+    text-decoration: none;
+    color: #50D074;
+}
 .pedidos{
     width: 414px;
     height: 100%;
@@ -45,6 +49,7 @@ body {
     background-color: white;
     border-radius: 100px;    
     color: #50D074;
+    text-decoration: none;
     font-size: 22px;
     font-weight: 700;
     margin-top: 24px;
@@ -109,7 +114,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 61px;
+    margin-bottom: 92px;
 }
 .conteudo >  :nth-child(1){
     margin-top: 117px;
@@ -141,7 +146,7 @@ body {
     box-sizing:content-box;
 }
 
-.opcoesPrato div :nth-child(n){
+.opcoesPrato div > :nth-child(n){
     margin-left: 14px;
     margin-top: 9px;
 }
@@ -162,8 +167,8 @@ body {
 .opcoesPrato div :nth-child(4){
     font-weight: 400;
 }
-.opcoesPrato div h3 strong{
-    margin-left: -10px;
+strong{
+    font-weight: 400;
 }
 .finalizar{
     width: 414px;
