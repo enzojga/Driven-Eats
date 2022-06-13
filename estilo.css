@@ -224,7 +224,6 @@ span{
 }
 .escolhido{
     border: 5px solid #32B72F;
-    box-sizing: border-box;
 }
 .escondido{
     display: none;
