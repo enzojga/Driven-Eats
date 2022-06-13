@@ -9,13 +9,14 @@ let valorTotal;
 
 function selecionarPrato(prato){
     let verificaEscolhido = document.querySelector('.principal .escolhido');
-    let verSelo = prato.querySelector('.seloOk');
+    let verSelo = prato.querySelector('.seloOk ');
     if(verificaEscolhido !== null){
         verificaEscolhido.classList.remove('escolhido');
+        verSelo.classList.add('escondido');
     } else{
         contador++;
     }
-    verSelo.classList.toggle('escondido');
+    verSelo.classList.remove('escondido');
     nomePrato = prato.querySelector('h1');
     nomePrato = nomePrato.innerText;
     precoPrato = prato.querySelector('strong');
@@ -27,7 +28,7 @@ function selecionarPrato(prato){
     console.log(transfereNome.innerText);
 
     let transferePreco = document.querySelector('.pedidos .precoPrato');
-    transferePreco.innerText = precoPrato;
+    transferePreco.innerText = precoPrato.toFixed(2);
     console.log(transferePreco.innerText);
 
     finalziarPedido();
@@ -53,7 +54,7 @@ function selecionarBebida(bebida){
     console.log(transfereNome.innerText);
 
     let transferePreco = document.querySelector('.pedidos .precoBebida');
-    transferePreco.innerText = precoBebida;
+    transferePreco.innerText = precoBebida.toFixed(2);
     console.log(transferePreco.innerText);
 
 }
@@ -76,21 +77,21 @@ function selecionarSobremesa(sobremesa){
     console.log(transfereNome.innerText);
 
     let transferePreco = document.querySelector('.pedidos .precoSobremesa');
-    transferePreco.innerText = precoSobremesa;
+    transferePreco.innerText = precoSobremesa.toFixed(2);
     console.log(transferePreco.innerText);
 
     let transfereTotal = document.querySelector('.pedidos .total');
     valorTotal = precoBebida + precoPrato + precoSobremesa;
-    transfereTotal.innerHTML = 'R$ ' + valorTotal.toFixed();
+    transfereTotal.innerHTML = 'R$ ' + valorTotal.toFixed(2);
     sobremesa.classList.add('escolhido');
     finalziarPedido();
 }
 function traducao(){
-    const menssagem = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+    const menssagem = encodeURIComponent(`Olá,   gostaria de fazer o pedido:
 - Prato: ${nomePrato}
 - Bebida: ${nomeBebida}
 - Sobremesa: ${nomeSobremesa}
-Total: R$ ${valorTotal}`)
+Total: R$ ${valorTotal.toFixed(2)}`)
     let envio = document.querySelector('.pedir');
     envio.innerHTML = `<a href="https://api.whatsapp.com/send/?phone=%2B5521990521525&amp;text=${menssagem}">\n                        Tudo certo, pode pedir!</a>`
     console.log(menssagem);
