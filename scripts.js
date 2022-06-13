@@ -9,14 +9,19 @@ let valorTotal;
 
 function selecionarPrato(prato){
     let verificaEscolhido = document.querySelector('.principal .escolhido');
-    let verSelo = prato.querySelector('.seloOk ');
+    let verSelo = prato.querySelector(`ion-icon`);
+    let seloOkCheck = document.querySelector('.principal .seloOk');
     if(verificaEscolhido !== null){
         verificaEscolhido.classList.remove('escolhido');
-        verSelo.classList.add('escondido');
-    } else{
+      } else{
         contador++;
     }
-    verSelo.classList.remove('escondido');
+   if(seloOkCheck !== null){
+    seloOkCheck.classList.add('seloOkB')
+    seloOkCheck.classList.remove('seloOk')
+   }
+    verSelo.classList.add('seloOk');
+    verSelo.classList.remove('seloOkB');
     nomePrato = prato.querySelector('h1');
     nomePrato = nomePrato.innerText;
     precoPrato = prato.querySelector('strong');
@@ -37,12 +42,19 @@ console.log(nomePrato);
 
 function selecionarBebida(bebida){
     let verificaEscolhido = document.querySelector('.bebidas .escolhido');
+    let verSelo = bebida.querySelector(`ion-icon`);
+    let seloOkCheck = document.querySelector('.bebidas .seloOk');
     if(verificaEscolhido !== null){
         verificaEscolhido.classList.remove('escolhido');
     } else{
         contador++;
     }
-
+    if(seloOkCheck !== null){
+        seloOkCheck.classList.add('seloOkB')
+        seloOkCheck.classList.remove('seloOk')
+    }
+    verSelo.classList.add('seloOk');
+    verSelo.classList.remove('seloOkB');   
     nomeBebida = bebida.querySelector('h1');
     nomeBebida = nomeBebida.innerText;
     precoBebida = bebida.querySelector('strong');
@@ -60,11 +72,22 @@ function selecionarBebida(bebida){
 }
 function selecionarSobremesa(sobremesa){
     let verificaEscolhido = document.querySelector('.sobremesa .escolhido');
+    let verSelo = sobremesa.querySelector(`ion-icon`);
+    let seloOkCheck = document.querySelector('.sobremesa .seloOk');
+
     if(verificaEscolhido !== null){
         verificaEscolhido.classList.remove('escolhido');
     } else{
         contador++;
     }
+
+    if(seloOkCheck !== null){
+        seloOkCheck.classList.add('seloOkB')
+        seloOkCheck.classList.remove('seloOk')
+    }
+
+    verSelo.classList.add('seloOk');
+    verSelo.classList.remove('seloOkB');   
 
     nomeSobremesa = sobremesa.querySelector('h1');
     nomeSobremesa = nomeSobremesa.innerText;
@@ -86,8 +109,14 @@ function selecionarSobremesa(sobremesa){
     sobremesa.classList.add('escolhido');
     finalziarPedido();
 }
+function mostrarPedido(){
+    if(contador >= 3){
+        const pog = document.querySelector('.pedidos');
+        pog.classList.remove('escondido');
+    }
+}
 function traducao(){
-    const menssagem = encodeURIComponent(`Olá,   gostaria de fazer o pedido:
+    const menssagem = encodeURIComponent(`Olá, gostaria de fazer o pedido:
 - Prato: ${nomePrato}
 - Bebida: ${nomeBebida}
 - Sobremesa: ${nomeSobremesa}
@@ -108,13 +137,7 @@ function finalziarPedido(){
     }
 }
 
-function mostrarPedido(){
-    if(contador >= 3){
-        const pog = document.querySelector('.pedidos');
-        pog.classList.remove('escondido');
 
-    }
-}
 function cancelar(){
     const pog = document.querySelector('.pedidos');
     pog.classList.add('escondido');
